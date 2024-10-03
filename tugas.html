@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 100%;
+            /* Allow full width */
+            margin: 0 auto;
+        }
+
+        .content {
+            float: left;
+            width: calc(33.33% - 40px);
+            /* 3 columns, subtracting padding */
+            margin: 10px;
+           
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .content img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .content h4 {
+            margin-top: 0;
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 900px) {
+            .content {
+                width: calc(50% - 40px);
+                /* 2 columns on medium screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                width: calc(100% - 40px);
+                /* 1 column on small screens */
+            }
+        }
+
+        /* Clear floats */
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Wisata Yogyakarta</h1>
+    <div class="container">
+        <div class="content">
+            <img src="arjuna.jpg" alt="Candi Arjuna">
+            <h4>Candi Arjuna</h4>
+        </div>
+        <div class="content">
+            <img src="breksi.jpg" alt="Tebing Breksi">
+            <h4>Tebing Breksi</h4>
+        </div>
+        <div class="content">
+            <img src="dieng.jpg" alt="Kawah Sikidang Dieng">
+            <h4>Kawah Sikidang Dieng</h4>
+        </div>
+        <div class="content">
+            <img src="kaliadem.jpg" alt="Bunker Kaliadem">
+            <h4>Bunker Kaliadem</h4>
+        </div>
+        <div class="content">
+            <img src="malioboro.jpg" alt="Malioboro">
+            <h4>Malioboro</h4>
+        </div>
+        <div class="content">
+            <img src="pantai.jpg" alt="Pantai Parangtritis">
+            <h4>Pantai Parangtritis</h4>
+        </div>
+    </div>
+</body>
+
+</html>
